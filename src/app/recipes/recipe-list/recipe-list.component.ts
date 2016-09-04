@@ -9,12 +9,16 @@ import {RecipeItemComponent} from "./recipe-item.component"
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[]=[];
+  @Output() recipeSelected = new EventEmitter<Recipe>();
   recipe= new Recipe('111','222','http://111.')
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelected(recipe: Recipe){
 
+    this.recipeSelected.emit(recipe);
+  }
 
 }

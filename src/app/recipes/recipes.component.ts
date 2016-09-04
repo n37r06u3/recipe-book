@@ -10,6 +10,7 @@ import {Recipe} from "./recipe";
   directives:[RecipeListComponent, RecipeDetailComponent]
 })
 export class RecipesComponent implements OnInit {
+  selectedRecipe:Recipe;
   constructor() { }
 
   ngOnInit() {
